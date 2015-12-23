@@ -1,0 +1,19 @@
+{
+  "name": "node-githooks-precommit-blog",
+  "version": "0.0.1",
+  "description": "Git: Node Pre-commit Hooks Supporting Blog Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "precommit",
+    "pre-commit",
+    "pre",
+    "commit",
+    "hooks"
+  ],
+  "author": "Allen Evans",
+  "license": "ISC"
+}
