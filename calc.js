@@ -14,11 +14,36 @@ function sum(num1, num2) {
   return num1 + num2;
 }
 
+/**
+ * Subtracts one number from the other.
+ * @param {number} num1
+ * @param {number} num2
+ * @returns {number}
+ */
+function subtract(num1, num2) {
+  return num1 - num2;
+}
+
 var num1 = argv._[0];
-var num2 = argv._[1];
+var operator = argv._[1];
+var num2 = argv._[2];
 
 if (isNaN(num1) || isNaN(num2)) {
   throw 'Arguments must be valid numbers';
 }
 
-console.log(sum(num1, num2));
+if (['+', '-'].indexOf(operator) < 0) {
+  throw 'Invalid operator';
+}
+
+var result;
+switch(operator) {
+  case '+':
+    result = sum(num1, num2);
+    break;
+  case '-':
+    result = subtract(num1, num2);
+    break;
+}
+
+console.log(result);

@@ -24,7 +24,7 @@ describe('calc app', function () {
   });
 
   it('should add two numbers together', function () {
-    setProcessArgs(3, 4);
+    setProcessArgs(3, '+', 4);
     require('../calc');
 
     expect(console.log).to.have.been.calledWith(7);
@@ -34,5 +34,13 @@ describe('calc app', function () {
     setProcessArgs('+', 4);
 
     expect(function () { require('../calc'); }).to.throw();
+  });
+
+
+  it('should subtract two numbers', function () {
+    setProcessArgs(8, '-', 5);
+    require('../calc');
+
+    expect(console.log).to.have.been.calledWith(3);
   });
 });

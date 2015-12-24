@@ -6,6 +6,12 @@
   "scripts": {
     "test": "mocha --colors spec/**/*.spec.js"
   },
+  "pre-commit": {
+    "silent": true,
+    "run": [
+      "test"
+    ]
+  },
   "keywords": [
     "git",
     "precommit",
@@ -23,6 +29,7 @@
     "sinon": "^1.17.2"
   },
   "devDependencies": {
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "pre-commit": "^1.1.2"
   }
 }
